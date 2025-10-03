@@ -1,54 +1,228 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZEC的Github主页</title>
+    <link rel="icon" href="img/ico.ico" type="image/x-icon">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
         body {
             background-image: url('https://i-blog.csdnimg.cn/blog_migrate/80172541efbeff2ea6751e81a79c20b6.gif');
-            background-repeat: no-repeat;    /* 不重复 */
-            background-size: cover;          /* 覆盖整个区域 */
-            background-position: center;     /* 居中 */
-            background-attachment: fixed;    /* 固定背景 */
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 800px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(90deg, #ff7e5f, #feb47b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            width: 100%;
+        }
+
+        .card {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 350px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            color: #feb47b;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #ff7e5f;
+        }
+
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            padding: 0.8rem 1.2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            text-decoration: none;
+            color: #fff;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .social-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .social-link i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .programming-languages {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+
+        .language {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 1rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .language:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+        }
+
+        footer {
+            margin-top: 2rem;
+            text-align: center;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            width: 100%;
+            max-width: 800px;
+            opacity: 0.8;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .card {
+                max-width: 100%;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
         }
     </style>
-    <head>
-        <title>ZEC的Github主页</title>
-        <meta charset="UTF-8">
-        <link rel="icon" href="img/ico.ico" type="image/x-icon">
-    <body>
-    <body>
-        <h3>ZEC的各个账号</h3>
-        <strong><a href="https://github.com/ZEC-dev">github</a></strong>
-        <pre></pre>
-        <strong><a href="https://luogu.com.cn/user/1533066">洛谷</a></strong>
-        <pre></pre>
-        <strong><a href="https://blog.csdn.net/2504_92811338?type=blog">CSDN</a></strong>
-        <pre></pre>
-        <pre>--------------</pre>
-        <h3>Cpp Program</h3>
-        <pre></pre>
-        <h3>Python Program</h3>
-        <pre></pre>
-        <h3>Java Program</h3>
-        <pre></pre>
-        <h3>C Program</h3>
-        <pre></pre>
-        <h3>HTML Program</h3>
-        <pre></pre>
-        <h3>CSS Program</h3>
-        <pre></pre>
-        <h3>JavaScript Program</h3>
-        <pre></pre>
-        <h3>SQL Program</h3>
-        <pre></pre>
-        <h3>PHP Program</h3>
-        <pre></pre>
-        <h3>C++ Program</h3>
-        <pre></pre>
-        <h3>C# Program</h3>
-        <pre></pre>
-        <h3>Swift Program</h3>
-        <pre></pre>
-        <h3>Kotlin Program</h3>
-        <pre></pre>
-    </body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ZEC的个人主页</h1>
+            <p class="subtitle">开发者 | 编程爱好者 | 技术探索者</p>
+            <p>欢迎来到我的个人主页，这里展示了我的一些项目和编程语言技能</p>
+        </header>
+        
+        <div class="content">
+            <div class="card">
+                <h2>社交媒体</h2>
+                <div class="social-links">
+                    <a href="https://github.com/ZEC-dev" class="social-link">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://luogu.com.cn/user/1533066" class="social-link">
+                        <i class="fas fa-code"></i> 洛谷
+                    </a>
+                    <a href="https://blog.csdn.net/2504_92811338?type=blog" class="social-link">
+                        <i class="fas fa-blog"></i> CSDN博客
+                    </a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>编程技能</h2>
+                <div class="programming-languages">
+                    <div class="language">C++</div>
+                    <div class="language">Python</div>
+                    <div class="language">Java</div>
+                    <div class="language">C</div>
+                    <div class="language">HTML</div>
+                    <div class="language">CSS</div>
+                    <div class="language">JavaScript</div>
+                    <div class="language">SQL</div>
+                    <div class="language">PHP</div>
+                    <div class="language">C#</div>
+                    <div class="language">Swift</div>
+                    <div class="language">Kotlin</div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2023 ZEC的个人主页 | 持续更新中</p>
+        </footer>
+    </div>
+</body>
 </html>
-
