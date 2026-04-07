@@ -1,0 +1,6 @@
+*.pyc
+dist/
+mkdocs_bootswatch.egg-info/
+site/
+venv/
+.tox
