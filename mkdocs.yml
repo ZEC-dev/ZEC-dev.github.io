@@ -1,14 +1,18 @@
-site_name: MkDocs Bootswatch Themes
-site_url: https://mkdocs.github.io/mkdocs-bootswatch/
-site_description: MkDocs Bootswatch Themes
-site_author: Tom Christie & Dougal Matthews
+site_name: ZEC的Blog/Doc
+site_url: http://zec_cn.pages.dev
+site_description: ZEC的Blog/Doc网站 By makedocs
+site_author: ZEC
 
-repo_url: https://github.com/mkdocs/mkdocs-bootswatch
+repo_url: https://github.com/ZEC-dev/ZEC-dev.github.io/
 
-copyright: Copyright &copy; 2014 <a href="https://twitter.com/_tomchristie">Tom Christie</a>, <a href="http://www.dougalmatthews.com/">Dougal Matthews</a>.
+copyright: Copyright &copy; 2013 <a href="https://zec_cn.pages.dev">ZEC</a>.
 
 theme:
-    name: flatly
+    name: cosmo
+
+nav :
+    - 首页: index.md 
+    - 入门指南: getting-started.md
 
 markdown_extensions:
     - toc:
