@@ -1,0 +1,29 @@
+---
+title: Документация на Fabric
+description: Официалната документация за Fabric, инструмент за модифициране на Minecraft.
+layout: home
+
+hero:
+  name: Документация на Fabric
+  tagline: Официалната документация за Fabric,<br />инструмент за модифициране на Minecraft.
+
+features:
+  - title: Ръководства за играча
+    icon: 📚
+    details: Вие играч, който иска да използва модове, задвижвани от Fabric ли сте? Нашите ръководства за играча са точно това, от което се нуждаете. Тези ръководства ще ви помогнат при изтеглянето, инсталирането и отстраняването на проблеми при модовете на Fabric.
+    link: /bg_bg/1.21.11/players/
+    linkText: Прочетете Повече
+  - title: Ръководства за разработчици
+    icon: 🛠️
+    details: Нашите ръководства за разработчици написани от общността обхващат всичко от настройването на вашата среда за разработка до напреднали теми като рендиране и мрежови технологии.
+    link: /bg_bg/1.21.11/develop/
+    linkText: Започнете
+---
+
+::: warning
+This documentation applies to Minecraft 1.21.11.
+
+Documentation for older versions may be incomplete. If you are looking for a different version, please select it from the dropdown on the navigation bar.
+:::
+
+Ако желаете да допринесете за документацията на Fabric, можете да намерите кодът в [GitHub](https://github.com/FabricMC/fabric-docs), както и съответните [указания за принос](./contributing).

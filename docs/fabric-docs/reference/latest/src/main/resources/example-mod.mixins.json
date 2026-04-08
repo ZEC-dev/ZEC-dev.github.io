@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "com.example.docs.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "mixins": ["ExampleMixin", "event.SheepEntityMixin", "class_tweakers.FlowingFluidMixin"],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}
