@@ -1,0 +1,21 @@
+# Hexo 生成的静态文件
+public/
+.deploy*/
+
+# 依赖
+node_modules/
+
+# Hexo 缓存
+db.json
+*.log
+.theme/
+.idea/
+.vscode/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 环境变量
+.env
+.env.local
