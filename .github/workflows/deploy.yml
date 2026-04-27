@@ -3,76 +3,46 @@ name: Deploy Hexo Blog
 on:
   push:
     branches:
-      - hexo  # 或者你 push 源码的分支名称，比如 source、hexo 等
-  workflow_dispatch:  # 支持手动触发
+      - hexo  # 或者 master
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     
     steps:
-      # 1. 检出代码
-      - name: Checkout source code
+      - name: Checkout source
         uses: actions/checkout@v4
-        with:
-          path: source
-          
-      # 2. 设置 Node.js 环境
+        
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'  # 根据你的 Hexo 需求调整
+          node-version: '20'
           
-      # 3. 安装依赖
       - name: Install dependencies
-        working-directory: ./source
         run: |
           npm install -g hexo-cli
           npm install
           
-      # 4. 生成静态文件
       - name: Generate static files
-        working-directory: ./source
         run: |
           hexo clean
           hexo generate
           
-      # 5. 配置 Git 用户信息
-      - name: Configure Git
+      - name: Push source to hexo branch
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          
-      # 6. 推送源码到 hexo 分支
-      - name: Push source code to hexo branch
-        run: |
-          cd source
-          git remote set-url origin git@github.com:zec-dev/zec-dev.github.io.git
-          git fetch origin
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git checkout -b hexo || git checkout hexo
           git add .
-          git diff --quiet && git diff --staged --quiet || git commit -m "Update source code: $(date '+%Y-%m-%d %H:%M:%S')"
-          git push origin hexo --force  # 使用 --force 要注意，如果多人协作请谨慎
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.HEXO_DEPLOY_KEY }}
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update source: $(date '+%Y-%m-%d %H:%M:%S')"
+          git push origin hexo --force
           
-      # 7. 推送生成的 HTML 到 main 分支
-      - name: Push HTML to main branch
-        run: |
-          # 创建临时目录存放生成的 HTML
-          mkdir deploy_temp
-          cp -r source/public/* deploy_temp/
-          
-          cd deploy_temp
-          git init
-          git remote add origin git@github.com:zec-dev/zec-dev.github.io.git
-          git checkout -b main
-          git add .
-          git commit -m "Deploy blog: $(date '+%Y-%m-%d %H:%M:%S')"
-          git push origin main --force
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.HEXO_DEPLOY_KEY }}
-          
-      # 8. 可选：清理临时文件
-      - name: Cleanup
-        run: rm -rf deploy_temp
+      - name: Deploy to main branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: main
+          force_orphan: true
