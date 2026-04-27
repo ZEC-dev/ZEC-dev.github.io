@@ -2,20 +2,19 @@ name: Deploy Hexo Blog
 
 on:
   push:
-    branches:
-      - hexo  # 或者 master
+    branches: hexo
   workflow_dispatch:
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     
     steps:
-      - name: Checkout source
-        uses: actions/checkout@v4
-        
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      
+      - uses: actions/setup-node@v4
         with:
           node-version: '20'
           
@@ -24,25 +23,26 @@ jobs:
           npm install -g hexo-cli
           npm install
           
-      - name: Generate static files
+      - name: Generate blog
         run: |
           hexo clean
           hexo generate
           
-      - name: Push source to hexo branch
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-          git checkout -b hexo || git checkout hexo
-          git add .
-          git diff --quiet && git diff --staged --quiet || git commit -m "Update source: $(date '+%Y-%m-%d %H:%M:%S')"
-          git push origin hexo --force
-          
-      - name: Deploy to main branch
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           publish_branch: main
           force_orphan: true
+          
+      - name: Save source code to hexo branch
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          # 关键修复：使用正确的小写用户名
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/zec-dev/zec-dev.github.io.git
+          git checkout hexo 2>/dev/null || git checkout -b hexo
+          git add .
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update source code: $(date '+%Y-%m-%d %H:%M:%S')"
+          git push origin hexo --force
