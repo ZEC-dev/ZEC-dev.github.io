@@ -3,7 +3,7 @@ name: Deploy Hexo Blog
 on:
   push:
     branches:
-      - main  # 或者你 push 源码的分支名称，比如 source、hexo 等
+      - hexo  # 或者你 push 源码的分支名称，比如 source、hexo 等
   workflow_dispatch:  # 支持手动触发
 
 jobs:
