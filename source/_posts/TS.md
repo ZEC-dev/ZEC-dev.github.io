@@ -1,5 +1,5 @@
 ---
-title: TS
+title: TypeScript教程
 date: 2026-04-29 21:21:03
 tags:
     - ts
