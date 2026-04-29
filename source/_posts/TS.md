@@ -5,7 +5,7 @@ tags:
     - ts
     - javascript
     - ByAI
-categories:                 # 分类
+categories:
   - 技术笔记
 except :
     TypeScript 全面入门指南
