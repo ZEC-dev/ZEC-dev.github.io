@@ -7,11 +7,10 @@ tags:
     - 帮助
 categories:
    - 帮助
-except :
-    fluid&&hexo 指南
 top: 10
 ---
-
+fluid&&hexo 指南
+<!-- more -->
 __转载至Fluid官方([Markdown](https://github.com/fluid-dev/hexo-fluid-docs/blob/source/docs/guide/README.md?plain=1),[HTML](https://hexo.fluid-dev.com/docs/guide/#tag-%E6%8F%92%E4%BB%B6))__
 # 补充 #
 ### `hexo-generator-index-pin-top`插件的使用

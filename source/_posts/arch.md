@@ -6,8 +6,9 @@ tags:
 categories:
     - Linux
     - 手写
-except: arch 安装教程
 ---
+arch 安装教程
+<!-- more -->
 
 ## SSH
 

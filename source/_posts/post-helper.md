@@ -5,11 +5,11 @@ tags:
     - 帮助
 categories:
    - 帮助
-except :
-    写文帮助
 top: 100
 ---
 # Front-matter 参数
+<!-- more -->
+fluid&&hexo 指南
 | 参数 | 作用 | 示例 |
 | :--- | :--- | :--- |
 | **title** | **文章标题** | `title: 深入理解Hexo` |
