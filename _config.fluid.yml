@@ -57,7 +57,7 @@ code:
     # 实现高亮的库，对应下面的设置
     # Highlight library
     # Options: highlightjs | prismjs
-    lib: "highlightjs"
+    lib: "prismjs"
 
     highlightjs:
       # 在链接中挑选 style 填入
@@ -868,7 +868,7 @@ waline:
   meta: ['nick', 'mail', 'link']
   requiredMeta: ['nick']
   lang: 'zh-CN'
-  emoji: ['https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo']
+  emoji: ['https://fastly.jsdelivr.net/gh/walinejs/emojis/weibo']
   dark: 'html[data-user-color-scheme="dark"]'
   wordLimit: 0
   pageSize: 10
@@ -1113,27 +1113,26 @@ static_prefix:
   internal_css: /css
   internal_img: /img
 
-  # 以下所有外链资源统一替换为 cdnjs 的地址
-  anchor: https://cdnjs.cloudflare.com/ajax/libs/anchor-js/5.0.0/
-  github_markdown: https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/
-  jquery: https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/
-  bootstrap: https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/
-  prismjs: https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/
-  tocbot: https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.20.1/
-  typed: https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/
-  fancybox: https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/
-  nprogress: https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/
-  mathjax: https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/
-  katex: https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.2/
-  busuanzi: https://busuanzi.ibruce.info/busuanzi/2.3/   # busuanzi 地址保持不变，它未使用 baomitu
-  clipboard: https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/
-  mermaid: https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.14.0/
-  valine: https://cdn.jsdelivr.net/npm/valine@1.5.1/dist/   # valine 建议使用 jsdelivr
-  waline: https://cdn.jsdelivr.net/npm/@waline/client@v3/dist/   # waline 地址保持 jsdelivr 不变
-  gitalk: https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/
-  disqusjs: https://cdnjs.cloudflare.com/ajax/libs/disqusjs/1.3.0/
-  twikoo: https://cdnjs.cloudflare.com/ajax/libs/twikoo/1.6.8/
-  discuss: https://cdnjs.cloudflare.com/ajax/libs/discuss/1.2.1/
-  hint: https://cdnjs.cloudflare.com/ajax/libs/hint.css/2.7.0/
-  moment: https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/
-
+  # 外链资源：只需指定到目录，主题会自动拼接文件名
+  anchor: https://cdn.bootcdn.net/ajax/libs/anchor-js/5.0.0/
+  github_markdown: https://cdn.bootcdn.net/ajax/libs/github-markdown-css/4.0.0/
+  jquery: https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/
+  bootstrap: https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.1/
+  prismjs: https://cdn.bootcdn.net/ajax/libs/prism/1.29.0/
+  tocbot: https://cdn.bootcdn.net/ajax/libs/tocbot/4.20.1/
+  typed: https://cdn.bootcdn.net/ajax/libs/typed.js/2.0.12/
+  fancybox: https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/
+  nprogress: https://cdn.bootcdn.net/ajax/libs/nprogress/0.2.0/
+  mathjax: https://cdn.bootcdn.net/ajax/libs/mathjax/3.2.2/
+  katex: https://cdn.bootcdn.net/ajax/libs/KaTeX/0.16.2/
+  busuanzi: https://busuanzi.ibruce.info/busuanzi/2.3/
+  clipboard: https://cdn.bootcdn.net/ajax/libs/clipboard.js/2.0.11/
+  mermaid: https://cdn.bootcdn.net/ajax/libs/mermaid/8.14.0/
+  valine: https://cdn.bootcdn.net/ajax/libs/valine/1.5.1/
+  waline: https://cdn.jsdelivr.net/npm/@waline/client@v3/dist/
+  gitalk: https://cdn.bootcdn.net/ajax/libs/gitalk/1.8.0/
+  disqusjs: https://cdn.bootcdn.net/ajax/libs/disqusjs/1.3.0/
+  twikoo: https://cdn.bootcdn.net/ajax/libs/twikoo/1.6.8/
+  discuss: https://cdn.bootcdn.net/ajax/libs/discuss/1.2.1/
+  hint: https://cdn.bootcdn.net/ajax/libs/hint.css/2.7.0/
+  moment: https://cdn.bootcdn.net/ajax/libs/moment.js/2.29.4/
