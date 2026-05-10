@@ -7,7 +7,7 @@ tags:
     - 帮助
 categories:
    - 帮助
-top: 10
+sticky: 10
 ---
 fluid&&hexo 指南
 <!-- more -->

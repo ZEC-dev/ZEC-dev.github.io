@@ -5,7 +5,7 @@ tags:
     - 帮助
 categories:
    - 帮助
-top: 100
+sticky: 100
 ---
 # Front-matter 参数
 <!-- more -->
@@ -17,7 +17,7 @@ fluid&&hexo 指南
 | **updated** | **更新日期** | `updated: 2024-01-02 12:00:00` |
 | **categories** | **文章分类** | `categories: [教程, Hexo]` |
 | **tags** | **文章标签** | `tags: [Fluid, 配置]` |
-| **top (或 pinned)** | **首页置顶** | `top: true` 或 `pinned: true`  |
+| **sticky** | **首页置顶** | `sticky 数值越大，该文章越靠前，达到类似于置顶的效果，其他未设置的文章依然按默认排序。`  |
 | **except** | **自定义摘要** | `except: 这是文章的简介...`  |
 | **math** | **启用LaTeX公式** | `math: true`  |
 | **toc** | **显示目录** | `toc: true`  |
