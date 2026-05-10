@@ -1,4 +1,3 @@
-// 路径: /你的博客根目录/scripts/inject.js
 
 hexo.extend.filter.register('theme_inject', function(injects) {
     
@@ -11,5 +10,5 @@ hexo.extend.filter.register('theme_inject', function(injects) {
             a:hover{cursor: url('/img/mouse_link.png') 0 0, pointer;}
         </style>
     `);
-    
+    injects.head.raw('CSS',`<link rel="stylesheet" href="/css/back.css">`);
 });

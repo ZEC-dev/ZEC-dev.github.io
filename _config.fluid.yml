@@ -1061,6 +1061,12 @@ links:
   # Member item of page
   items:
     - {
+      title: "YCX2012",
+      intro: "YCX2012",
+      link: "https://www.luogu.com.cn/user/1049343",
+      avatar: "https://cdn.luogu.com.cn/upload/usericon/1049343.png"
+    }
+    - {
       title: "Fluid Blog",
       intro: "主题博客",
       link: "https://hexo.fluid-dev.com/",
