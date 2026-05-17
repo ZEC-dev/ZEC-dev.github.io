@@ -1,0 +1,1881 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/logo-zec.png">
+  <link rel="icon" href="/img/logo-zec.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="zec">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="TypeScript 全面入门指南TypeScript 是微软开发的一个基于 JavaScript 的强类型编程语言，它添加了静态类型检查和其他高级特性，最终编译成纯 JavaScript 运行。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TypeScript教程">
+<meta property="og:url" content="http://zec-cn.pages.dev/2026/04/29/TS/index.html">
+<meta property="og:site_name" content="ZEC Blogs">
+<meta property="og:description" content="TypeScript 全面入门指南TypeScript 是微软开发的一个基于 JavaScript 的强类型编程语言，它添加了静态类型检查和其他高级特性，最终编译成纯 JavaScript 运行。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-04-29T21:21:03.000Z">
+<meta property="article:modified_time" content="2026-05-17T14:05:37.864Z">
+<meta property="article:author" content="zec">
+<meta property="article:tag" content="ByAI">
+<meta property="article:tag" content="javascript">
+<meta property="article:tag" content="ts">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>TypeScript教程 - ZEC Blogs</title>
+
+  <link  rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" />
+
+  <link  rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zec-cn.pages.dev","root":"/","version":"1.9.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"expand_all":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"openkounter":{"server_url":"https://open-kounter.mintimate.cn","path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="c32e9625-677e-42ce-9bc2-d09a84da3333"></script>
+        <style>
+            body {
+                cursor: url('/img/mouse_main.png') 0 0, auto;
+            }
+            a:hover{cursor: url('/img/mouse_link.png') 0 0, pointer;}
+        </style>
+    <link rel="stylesheet" href="/css/back.css">
+<meta name="generator" content="Hexo 8.1.2"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>ZEC Blogs</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content (desktop) -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile grid menu overlay -->
+<div id="mobile-grid-menu" class="d-lg-none">
+  <div class="mobile-grid-menu-inner">
+    <div class="container">
+      <div class="row">
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-home-fill"></i>
+                  <span>首页</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/archives/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-archive-fill"></i>
+                  <span>归档</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/categories/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-category-fill"></i>
+                  <span>分类</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/tags/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-tags-fill"></i>
+                  <span>标签</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/about/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-user-fill"></i>
+                  <span>关于</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/links/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-link-fill"></i>
+                  <span>友链</span>
+                </div>
+              </a>
+            </div>
+          
+        
+        
+          <div class="col-4 mobile-grid-cell" id="mobile-search-btn">
+            <a href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <div class="mobile-grid-item">
+                <i class="iconfont icon-search"></i>
+                <span>搜索</span>
+              </div>
+            </a>
+          </div>
+        
+        
+          <div class="col-4 mobile-grid-cell" id="mobile-color-toggle-btn"
+               data-label-light="开灯"
+               data-label-dark="关灯">
+            <a href="javascript:;" aria-label="Color Toggle">
+              <div class="mobile-grid-item">
+                <i class="iconfont icon-dark" id="mobile-color-toggle-icon"></i>
+                <span id="mobile-color-toggle-label">关灯</span>
+              </div>
+            </a>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/TB.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="TypeScript教程"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        zec
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2026-04-29 21:21" pubdate>
+          星期三, 四月 29日 2026, 9:21 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          <!-- compatible with older versions-->
+          22k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          <!-- compatible with older versions-->
+          185 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">TypeScript教程</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="TypeScript-全面入门指南"><a href="#TypeScript-全面入门指南" class="headerlink" title="TypeScript 全面入门指南"></a>TypeScript 全面入门指南</h1><p>TypeScript 是微软开发的一个基于 JavaScript 的强类型编程语言，它添加了静态类型检查和其他高级特性，最终编译成纯 JavaScript 运行。</p>
+<span id="more"></span>
+
+<h2 id="一、环境搭建与基础配置"><a href="#一、环境搭建与基础配置" class="headerlink" title="一、环境搭建与基础配置"></a>一、环境搭建与基础配置</h2><h3 id="1-1-安装-TypeScript"><a href="#1-1-安装-TypeScript" class="headerlink" title="1.1 安装 TypeScript"></a>1.1 安装 TypeScript</h3><p>安装 TypeScript 有两种主要方式：</p>
+<figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F; 全局安装（推荐初学者）
+npm install -g typescript
+
+&#x2F;&#x2F; 检查安装是否成功
+tsc --version
+
+&#x2F;&#x2F; 或者在项目中作为开发依赖安装
+npm init -y
+npm install typescript --save-dev<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+
+<h3 id="1-2-创建第一个-TypeScript-文件"><a href="#1-2-创建第一个-TypeScript-文件" class="headerlink" title="1.2 创建第一个 TypeScript 文件"></a>1.2 创建第一个 TypeScript 文件</h3><p>创建一个简单的 TypeScript 文件：</p>
+<figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F; hello.ts
+function greet(name: string): string &#123;
+    return &#96;Hello, $&#123;name&#125;!&#96;;
+&#125;
+
+const message &#x3D; greet(&quot;TypeScript&quot;);
+console.log(message);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+
+<h3 id="1-3-编译-TypeScript"><a href="#1-3-编译-TypeScript" class="headerlink" title="1.3 编译 TypeScript"></a>1.3 编译 TypeScript</h3><p>使用 TypeScript 编译器将 <code>.ts</code> 文件编译为 <code>.js</code> 文件：</p>
+<figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F; 编译单个文件
+tsc hello.ts
+
+&#x2F;&#x2F; 编译后生成 hello.js
+&#x2F;&#x2F; hello.js
+function greet(name) &#123;
+    return &quot;Hello, &quot; + name + &quot;!&quot;;
+&#125;
+var message &#x3D; greet(&quot;TypeScript&quot;);
+console.log(message);
+
+&#x2F;&#x2F; 自动编译和监听变化
+tsc --watch hello.ts
+&#x2F;&#x2F; 或
+tsc -w hello.ts<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+
+<h3 id="1-4-配置-tsconfig-json"><a href="#1-4-配置-tsconfig-json" class="headerlink" title="1.4 配置 tsconfig.json"></a>1.4 配置 tsconfig.json</h3><p>创建 <code>tsconfig.json</code> 配置文件来管理编译选项：</p>
+<figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F; 生成默认配置文件
+tsc --init
+
+&#x2F;&#x2F; 一个完整的 tsconfig.json 示例
+&#123;
+    &quot;compilerOptions&quot;: &#123;
+        &quot;target&quot;: &quot;ES2020&quot;,                    &#x2F;&#x2F; 编译目标版本
+        &quot;module&quot;: &quot;commonjs&quot;,                  &#x2F;&#x2F; 模块系统
+        &quot;lib&quot;: [&quot;ES2020&quot;, &quot;DOM&quot;],             &#x2F;&#x2F; 包含的库文件
+        &quot;outDir&quot;: &quot;.&#x2F;dist&quot;,                    &#x2F;&#x2F; 输出目录
+        &quot;rootDir&quot;: &quot;.&#x2F;src&quot;,                    &#x2F;&#x2F; 源码目录
+        &quot;strict&quot;: true,                        &#x2F;&#x2F; 启用所有严格检查
+        &quot;esModuleInterop&quot;: true,              &#x2F;&#x2F; 兼容 CommonJS 和 ES 模块
+        &quot;skipLibCheck&quot;: true,                 &#x2F;&#x2F; 跳过库文件检查
+        &quot;forceConsistentCasingInFileNames&quot;: true
+    &#125;,
+    &quot;include&quot;: [&quot;src&#x2F;**&#x2F;*&quot;],                  &#x2F;&#x2F; 包含的文件
+    &quot;exclude&quot;: [&quot;node_modules&quot;, &quot;dist&quot;]       &#x2F;&#x2F; 排除的文件
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+
+<h2 id="二、基础类型系统"><a href="#二、基础类型系统" class="headerlink" title="二、基础类型系统"></a>二、基础类型系统</h2><h3 id="2-1-JavaScript-的基础类型"><a href="#2-1-JavaScript-的基础类型" class="headerlink" title="2.1 JavaScript 的基础类型"></a>2.1 JavaScript 的基础类型</h3><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F; 布尔类型
+let isDone: boolean &#x3D; true;
+
+&#x2F;&#x2F; 数字类型：支持十进制、十六进制、二进制和八进制
+let decimal: number &#x3D; 6;
+let hex: number &#x3D; 0xf00d;
+let binary: number &#x3D; 0b1010;
+let octal: number &#x3D; 0o744;
+
+&#x2F;&#x2F; 字符串类型
+let color: string &#x3D; &quot;blue&quot;;
+color &#x3D; &#39;red&#39;;
+let fullName: string &#x3D; &#96;Bob Bobbington&#96;;
+let age: number &#x3D; 37;
+let sentence: string &#x3D; &#96;Hello, my name is $&#123;fullName&#125;. I&#39;ll be $&#123;age + 1&#125; years old next month.&#96;;
+
+&#x2F;&#x2F; 数组类型：两种表示方式
+let list1: number[] &#x3D; [1, 2, 3];
+let list2: Array&lt;number&gt; &#x3D; [1, 2, 3];  &#x2F;&#x2F; 泛型语法
+
+&#x2F;&#x2F; 元组：固定数量和类型的数组
+let tuple: [string, number];
+tuple &#x3D; [&quot;hello&quot;, 10];  &#x2F;&#x2F; OK
+&#x2F;&#x2F; tuple &#x3D; [10, &quot;hello&quot;];  &#x2F;&#x2F; Error
+
+&#x2F;&#x2F; 访问元组元素
+console.log(tuple[0].substring(1));  &#x2F;&#x2F; OK
+&#x2F;&#x2F; console.log(tuple[1].substring(1)); &#x2F;&#x2F; Error: number 没有 substring 方法
+
+&#x2F;&#x2F; 枚举：给数字值取友好的名字
+enum Color &#123;
+    Red,
+    Green,
+    Blue
+&#125;
+let c: Color &#x3D; Color.Green;  &#x2F;&#x2F; 1
+
+&#x2F;&#x2F; 也可以手动指定值
+enum Status &#123;
+    Success &#x3D; 200,
+    NotFound &#x3D; 404,
+    ServerError &#x3D; 500
+&#125;
+
+&#x2F;&#x2F; 任意类型：可以赋予任何值（慎用）
+let notSure: any &#x3D; 4;
+notSure &#x3D; &quot;maybe a string instead&quot;;
+notSure &#x3D; false;
+
+&#x2F;&#x2F; 空值：void 表示没有任何类型
+function warnUser(): void &#123;
+    console.log(&quot;This is my warning message&quot;);
+&#125;
+
+&#x2F;&#x2F; null 和 undefined
+let u: undefined &#x3D; undefined;
+let n: null &#x3D; null;
+
+&#x2F;&#x2F; never 类型：表示永不存在的值
+function error(message: string): never &#123;
+    throw new Error(message);
+&#125;
+
+function infiniteLoop(): never &#123;
+    while (true) &#123;&#125;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+
+<h3 id="2-2-类型断言"><a href="#2-2-类型断言" class="headerlink" title="2.2 类型断言"></a>2.2 类型断言</h3><p>类型断言告诉编译器”我知道这个值的类型”：</p>
+<figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F; 类型断言的两种语法
+let someValue: any &#x3D; &quot;this is a string&quot;;
+
+&#x2F;&#x2F; 尖括号语法
+let strLength1: number &#x3D; (&lt;string&gt;someValue).length;
+
+&#x2F;&#x2F; as 语法（在 JSX 中必须使用）
+let strLength2: number &#x3D; (someValue as string).length;
+
+&#x2F;&#x2F; 示例：处理来自 API 的数据
+interface UserData &#123;
+    name: string;
+    age: number;
+&#125;
+
+function processData(data: any): void &#123;
+    &#x2F;&#x2F; 使用类型断言确保类型安全
+    const userData &#x3D; data as UserData;
+    console.log(&#96;User: $&#123;userData.name&#125;, Age: $&#123;userData.age&#125;&#96;);
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+
+<h3 id="2-3-类型推断"><a href="#2-3-类型推断" class="headerlink" title="2.3 类型推断"></a>2.3 类型推断</h3><p>TypeScript 会自动推断变量的类型：</p>
+<figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F; 类型推断示例
+let x &#x3D; 3;                  &#x2F;&#x2F; x 被推断为 number
+let y &#x3D; &quot;hello&quot;;            &#x2F;&#x2F; y 被推断为 string
+let z &#x3D; [1, 2, 3];          &#x2F;&#x2F; z 被推断为 number[]
+
+&#x2F;&#x2F; 最佳实践：让 TypeScript 推断简单类型
+const isReady &#x3D; true;       &#x2F;&#x2F; 推断为 true 字面量类型
+const count &#x3D; 10;           &#x2F;&#x2F; 推断为 10 字面量类型
+
+&#x2F;&#x2F; 复杂对象也能正确推断
+const user &#x3D; &#123;
+    name: &quot;Alice&quot;,
+    age: 30,
+    isAdmin: false
+&#125;;
+&#x2F;&#x2F; user 被推断为 &#123; name: string; age: number; isAdmin: boolean; &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+
+<h2 id="三、函数"><a href="#三、函数" class="headerlink" title="三、函数"></a>三、函数</h2><h3 id="3-1-函数类型注解"><a href="#3-1-函数类型注解" class="headerlink" title="3.1 函数类型注解"></a>3.1 函数类型注解</h3><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F; 完整的函数类型注解
+function add(x: number, y: number): number &#123;
+    return x + y;
+&#125;
+
+&#x2F;&#x2F; 函数表达式
+const multiply &#x3D; function(x: number, y: number): number &#123;
+    return x * y;
+&#125;;
+
+&#x2F;&#x2F; 箭头函数
+const divide &#x3D; (x: number, y: number): number &#x3D;&gt; &#123;
+    return x &#x2F; y;
+&#125;;
+
+&#x2F;&#x2F; 可选参数（必须放在必需参数后面）
+function buildName(firstName: string, lastName?: string): string &#123;
+    if (lastName) &#123;
+        return &#96;$&#123;firstName&#125; $&#123;lastName&#125;&#96;;
+    &#125;
+    return firstName;
+&#125;
+
+&#x2F;&#x2F; 默认参数
+function createUser(name: string, age: number &#x3D; 18): string &#123;
+    return &#96;$&#123;name&#125; is $&#123;age&#125; years old&#96;;
+&#125;
+
+&#x2F;&#x2F; 剩余参数
+function sum(...numbers: number[]): number &#123;
+    return numbers.reduce((total, num) &#x3D;&gt; total + num, 0);
+&#125;
+
+&#x2F;&#x2F; 函数重载
+function processInput(input: string): string[];
+function processInput(input: number): number;
+function processInput(input: string | number): string[] | number &#123;
+    if (typeof input &#x3D;&#x3D;&#x3D; &quot;string&quot;) &#123;
+        return input.split(&quot;&quot;);
+    &#125; else &#123;
+        return input * 2;
+    &#125;
+&#125;
+
+&#x2F;&#x2F; 调用重载函数
+const result1 &#x3D; processInput(&quot;hello&quot;);  &#x2F;&#x2F; string[]
+const result2 &#x3D; processInput(42);       &#x2F;&#x2F; number<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+
+<h3 id="3-2-函数类型"><a href="#3-2-函数类型" class="headerlink" title="3.2 函数类型"></a>3.2 函数类型</h3><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F; 函数类型定义
+type MathOperation &#x3D; (x: number, y: number) &#x3D;&gt; number;
+
+&#x2F;&#x2F; 使用函数类型
+const add: MathOperation &#x3D; (a, b) &#x3D;&gt; a + b;
+const subtract: MathOperation &#x3D; (a, b) &#x3D;&gt; a - b;
+
+&#x2F;&#x2F; 回调函数类型
+function fetchData(callback: (data: string) &#x3D;&gt; void): void &#123;
+    &#x2F;&#x2F; 模拟异步操作
+    setTimeout(() &#x3D;&gt; &#123;
+        callback(&quot;Data received&quot;);
+    &#125;, 1000);
+&#125;
+
+&#x2F;&#x2F; 调用带有回调的函数
+fetchData((data) &#x3D;&gt; &#123;
+    console.log(data);
+&#125;);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+
+<h2 id="四、接口"><a href="#四、接口" class="headerlink" title="四、接口"></a>四、接口</h2><h3 id="4-1-对象接口"><a href="#4-1-对象接口" class="headerlink" title="4.1 对象接口"></a>4.1 对象接口</h3><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F; 基础接口
+interface Person &#123;
+    name: string;
+    age: number;
+    email?: string;  &#x2F;&#x2F; 可选属性
+    readonly id: number;  &#x2F;&#x2F; 只读属性
+&#125;
+
+&#x2F;&#x2F; 使用接口
+const alice: Person &#x3D; &#123;
+    name: &quot;Alice&quot;,
+    age: 30,
+    id: 12345
+&#125;;
+
+&#x2F;&#x2F; alice.id &#x3D; 54321;  &#x2F;&#x2F; Error: 只读属性不能修改
+
+&#x2F;&#x2F; 函数类型接口
+interface SearchFunc &#123;
+    (source: string, subString: string): boolean;
+&#125;
+
+const mySearch: SearchFunc &#x3D; function(src, sub) &#123;
+    return src.search(sub) &gt; -1;
+&#125;;
+
+&#x2F;&#x2F; 可索引接口
+interface StringArray &#123;
+    [index: number]: string;
+&#125;
+
+const myArray: StringArray &#x3D; [&quot;Bob&quot;, &quot;Fred&quot;];
+const myStr: string &#x3D; myArray[0];<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+
+<h3 id="4-2-接口继承"><a href="#4-2-接口继承" class="headerlink" title="4.2 接口继承"></a>4.2 接口继承</h3><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F; 接口继承
+interface Shape &#123;
+    color: string;
+&#125;
+
+interface Square extends Shape &#123;
+    sideLength: number;
+&#125;
+
+const square: Square &#x3D; &#123;
+    color: &quot;red&quot;,
+    sideLength: 10
+&#125;;
+
+&#x2F;&#x2F; 多继承
+interface PenStroke &#123;
+    penWidth: number;
+&#125;
+
+interface Square2 extends Shape, PenStroke &#123;
+    sideLength: number;
+&#125;
+
+const square2: Square2 &#x3D; &#123;
+    color: &quot;blue&quot;,
+    sideLength: 5,
+    penWidth: 1.0
+&#125;;
+
+&#x2F;&#x2F; 类实现接口
+interface ClockInterface &#123;
+    currentTime: Date;
+    setTime(d: Date): void;
+&#125;
+
+class Clock implements ClockInterface &#123;
+    currentTime: Date &#x3D; new Date();
+    
+    setTime(d: Date) &#123;
+        this.currentTime &#x3D; d;
+    &#125;
+    
+    constructor(h: number, m: number) &#123;&#125;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+
+<h2 id="五、类"><a href="#五、类" class="headerlink" title="五、类"></a>五、类</h2><h3 id="5-1-类的基础"><a href="#5-1-类的基础" class="headerlink" title="5.1 类的基础"></a>5.1 类的基础</h3><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F; 类的基本结构
+class Animal &#123;
+    &#x2F;&#x2F; 属性
+    private name: string;
+    protected age: number;  &#x2F;&#x2F; 可以在子类中访问
+    public species: string;
+    
+    &#x2F;&#x2F; 静态属性
+    static classification: string &#x3D; &quot;Animalia&quot;;
+    
+    &#x2F;&#x2F; 构造函数
+    constructor(name: string, age: number) &#123;
+        this.name &#x3D; name;
+        this.age &#x3D; age;
+        this.species &#x3D; &quot;Unknown&quot;;
+    &#125;
+    
+    &#x2F;&#x2F; 方法
+    public move(distanceInMeters: number &#x3D; 0): void &#123;
+        console.log(&#96;$&#123;this.name&#125; moved $&#123;distanceInMeters&#125;m.&#96;);
+    &#125;
+    
+    &#x2F;&#x2F; 私有方法
+    private sleep(): void &#123;
+        console.log(&#96;$&#123;this.name&#125; is sleeping&#96;);
+    &#125;
+    
+    &#x2F;&#x2F; 静态方法
+    static getClassification(): string &#123;
+        return this.classification;
+    &#125;
+    
+    &#x2F;&#x2F; Getter 和 Setter
+    get animalName(): string &#123;
+        return this.name;
+    &#125;
+    
+    set animalName(newName: string) &#123;
+        if (newName.length &gt; 0) &#123;
+            this.name &#x3D; newName;
+        &#125;
+    &#125;
+&#125;
+
+&#x2F;&#x2F; 使用类
+const dog &#x3D; new Animal(&quot;Dog&quot;, 3);
+dog.move(10);
+console.log(Animal.getClassification());
+dog.animalName &#x3D; &quot;Buddy&quot;;
+console.log(dog.animalName);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+
+<h3 id="5-2-继承"><a href="#5-2-继承" class="headerlink" title="5.2 继承"></a>5.2 继承</h3><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F; 继承
+class Bird extends Animal &#123;
+    private wingSpan: number;
+    
+    constructor(name: string, age: number, wingSpan: number) &#123;
+        super(name, age);  &#x2F;&#x2F; 调用父类构造函数
+        this.species &#x3D; &quot;Bird&quot;;
+        this.wingSpan &#x3D; wingSpan;
+    &#125;
+    
+    &#x2F;&#x2F; 重写父类方法
+    public move(distanceInMeters: number &#x3D; 0): void &#123;
+        console.log(&#96;$&#123;this.animalName&#125; flew $&#123;distanceInMeters&#125;m.&#96;);
+        super.move(distanceInMeters);  &#x2F;&#x2F; 调用父类方法
+    &#125;
+    
+    &#x2F;&#x2F; 新增方法
+    public chirp(): void &#123;
+        console.log(&quot;Chirp chirp!&quot;);
+    &#125;
+&#125;
+
+&#x2F;&#x2F; 抽象类
+abstract class Department &#123;
+    constructor(public name: string) &#123;&#125;
+    
+    printName(): void &#123;
+        console.log(&quot;Department name: &quot; + this.name);
+    &#125;
+    
+    abstract printMeeting(): void;  &#x2F;&#x2F; 必须在子类中实现
+&#125;
+
+class AccountingDepartment extends Department &#123;
+    constructor() &#123;
+        super(&quot;Accounting and Auditing&quot;);
+    &#125;
+    
+    printMeeting(): void &#123;
+        console.log(&quot;The Accounting Department meets each Monday at 10am.&quot;);
+    &#125;
+    
+    generateReports(): void &#123;
+        console.log(&quot;Generating accounting reports...&quot;);
+    &#125;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+
+<h2 id="六、泛型"><a href="#六、泛型" class="headerlink" title="六、泛型"></a>六、泛型</h2><h3 id="6-1-泛型基础"><a href="#6-1-泛型基础" class="headerlink" title="6.1 泛型基础"></a>6.1 泛型基础</h3><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F; 泛型函数
+function identity&lt;T&gt;(arg: T): T &#123;
+    return arg;
+&#125;
+
+&#x2F;&#x2F; 使用泛型函数
+let output1 &#x3D; identity&lt;string&gt;(&quot;myString&quot;);
+let output2 &#x3D; identity(&quot;myString&quot;);  &#x2F;&#x2F; 类型推断
+
+&#x2F;&#x2F; 泛型数组
+function loggingIdentity&lt;T&gt;(arg: T[]): T[] &#123;
+    console.log(arg.length);
+    return arg;
+&#125;
+
+&#x2F;&#x2F; 泛型约束
+interface Lengthwise &#123;
+    length: number;
+&#125;
+
+function loggingIdentity2&lt;T extends Lengthwise&gt;(arg: T): T &#123;
+    console.log(arg.length);
+    return arg;
+&#125;
+
+&#x2F;&#x2F; loggingIdentity2(3);  &#x2F;&#x2F; Error: number 没有 length 属性
+loggingIdentity2(&quot;hello&quot;);  &#x2F;&#x2F; OK
+loggingIdentity2([1, 2, 3]);  &#x2F;&#x2F; OK
+
+&#x2F;&#x2F; 泛型接口
+interface GenericIdentityFn&lt;T&gt; &#123;
+    (arg: T): T;
+&#125;
+
+function identity2&lt;T&gt;(arg: T): T &#123;
+    return arg;
+&#125;
+
+let myIdentity: GenericIdentityFn&lt;number&gt; &#x3D; identity2;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+
+<h3 id="6-2-泛型类"><a href="#6-2-泛型类" class="headerlink" title="6.2 泛型类"></a>6.2 泛型类</h3><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F; 泛型类
+class GenericNumber&lt;T&gt; &#123;
+    zeroValue: T;
+    add: (x: T, y: T) &#x3D;&gt; T;
+    
+    constructor(zeroValue: T, add: (x: T, y: T) &#x3D;&gt; T) &#123;
+        this.zeroValue &#x3D; zeroValue;
+        this.add &#x3D; add;
+    &#125;
+&#125;
+
+let myGenericNumber &#x3D; new GenericNumber&lt;number&gt;(0, (x, y) &#x3D;&gt; x + y);
+let stringNumeric &#x3D; new GenericNumber&lt;string&gt;(&quot;&quot;, (x, y) &#x3D;&gt; x + y);
+
+&#x2F;&#x2F; 使用多个泛型参数
+class Pair&lt;K, V&gt; &#123;
+    constructor(public key: K, public value: V) &#123;&#125;
+    
+    getKey(): K &#123;
+        return this.key;
+    &#125;
+    
+    getValue(): V &#123;
+        return this.value;
+    &#125;
+&#125;
+
+const pair1 &#x3D; new Pair&lt;string, number&gt;(&quot;age&quot;, 30);
+const pair2 &#x3D; new Pair&lt;number, boolean&gt;(1, true);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+
+<h2 id="七、模块"><a href="#七、模块" class="headerlink" title="七、模块"></a>七、模块</h2><h3 id="7-1-导出和导入"><a href="#7-1-导出和导入" class="headerlink" title="7.1 导出和导入"></a>7.1 导出和导入</h3><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F; math.ts - 导出模块
+export const PI &#x3D; 3.14159;
+
+export function calculateCircumference(diameter: number): number &#123;
+    return PI * diameter;
+&#125;
+
+export function calculateArea(radius: number): number &#123;
+    return PI * radius * radius;
+&#125;
+
+&#x2F;&#x2F; 默认导出
+export default class Calculator &#123;
+    static add(a: number, b: number): number &#123;
+        return a + b;
+    &#125;
+&#125;
+
+&#x2F;&#x2F; app.ts - 导入模块
+import Calculator, &#123; PI, calculateCircumference &#125; from &#39;.&#x2F;math&#39;;
+
+&#x2F;&#x2F; 重命名导入
+import &#123; PI as PiValue &#125; from &#39;.&#x2F;math&#39;;
+
+&#x2F;&#x2F; 导入所有
+import * as MathUtils from &#39;.&#x2F;math&#39;;
+
+console.log(calculateCircumference(10));
+console.log(Calculator.add(5, 3));
+console.log(MathUtils.PI);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+
+<h3 id="7-2-命名空间"><a href="#7-2-命名空间" class="headerlink" title="7.2 命名空间"></a>7.2 命名空间</h3><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F; 命名空间
+namespace Validation &#123;
+    export interface StringValidator &#123;
+        isAcceptable(s: string): boolean;
+    &#125;
+    
+    const lettersRegexp &#x3D; &#x2F;^[A-Za-z]+$&#x2F;;
+    const numberRegexp &#x3D; &#x2F;^[0-9]+$&#x2F;;
+    
+    export class LettersOnlyValidator implements StringValidator &#123;
+        isAcceptable(s: string) &#123;
+            return lettersRegexp.test(s);
+        &#125;
+    &#125;
+    
+    export class ZipCodeValidator implements StringValidator &#123;
+        isAcceptable(s: string) &#123;
+            return s.length &#x3D;&#x3D;&#x3D; 5 &amp;&amp; numberRegexp.test(s);
+        &#125;
+    &#125;
+&#125;
+
+&#x2F;&#x2F; 使用命名空间
+let validators: &#123; [s: string]: Validation.StringValidator; &#125; &#x3D; &#123;&#125;;
+validators[&quot;ZIP code&quot;] &#x3D; new Validation.ZipCodeValidator();
+validators[&quot;Letters only&quot;] &#x3D; new Validation.LettersOnlyValidator();
+
+&#x2F;&#x2F; 测试
+[&quot;Hello&quot;, &quot;98052&quot;, &quot;101&quot;].forEach(s &#x3D;&gt; &#123;
+    for (let name in validators) &#123;
+        console.log(&#96;&quot;$&#123;s&#125;&quot; - $&#123;validators[name].isAcceptable(s) ? &#39;matches&#39; : &#39;does not match&#39;&#125; $&#123;name&#125;&#96;);
+    &#125;
+&#125;);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+
+<h2 id="八、高级类型"><a href="#八、高级类型" class="headerlink" title="八、高级类型"></a>八、高级类型</h2><h3 id="8-1-联合类型和交叉类型"><a href="#8-1-联合类型和交叉类型" class="headerlink" title="8.1 联合类型和交叉类型"></a>8.1 联合类型和交叉类型</h3><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F; 联合类型
+type StringOrNumber &#x3D; string | number;
+
+function processInput(input: StringOrNumber): string &#123;
+    if (typeof input &#x3D;&#x3D;&#x3D; &quot;string&quot;) &#123;
+        return input.toUpperCase();
+    &#125; else &#123;
+        return input.toFixed(2);
+    &#125;
+&#125;
+
+&#x2F;&#x2F; 交叉类型
+interface Person &#123;
+    name: string;
+    age: number;
+&#125;
+
+interface Employee &#123;
+    employeeId: string;
+    department: string;
+&#125;
+
+type Staff &#x3D; Person &amp; Employee;
+
+const staff: Staff &#x3D; &#123;
+    name: &quot;Alice&quot;,
+    age: 30,
+    employeeId: &quot;E123&quot;,
+    department: &quot;Engineering&quot;
+&#125;;
+
+&#x2F;&#x2F; 字面量类型
+type Direction &#x3D; &quot;north&quot; | &quot;south&quot; | &quot;east&quot; | &quot;west&quot;;
+type StatusCode &#x3D; 200 | 404 | 500;
+
+function move(direction: Direction): void &#123;
+    console.log(&#96;Moving $&#123;direction&#125;&#96;);
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+
+<h3 id="8-2-类型别名和映射类型"><a href="#8-2-类型别名和映射类型" class="headerlink" title="8.2 类型别名和映射类型"></a>8.2 类型别名和映射类型</h3><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F; 类型别名
+type Point &#x3D; &#123;
+    x: number;
+    y: number;
+&#125;;
+
+type ID &#x3D; string | number;
+
+&#x2F;&#x2F; 映射类型
+type Readonly&lt;T&gt; &#x3D; &#123;
+    readonly [P in keyof T]: T[P];
+&#125;;
+
+type Partial&lt;T&gt; &#x3D; &#123;
+    [P in keyof T]?: T[P];
+&#125;;
+
+interface User &#123;
+    id: number;
+    name: string;
+    email: string;
+&#125;
+
+type ReadonlyUser &#x3D; Readonly&lt;User&gt;;
+type PartialUser &#x3D; Partial&lt;User&gt;;
+
+&#x2F;&#x2F; 条件类型
+type IsString&lt;T&gt; &#x3D; T extends string ? true : false;
+type Result1 &#x3D; IsString&lt;string&gt;;  &#x2F;&#x2F; true
+type Result2 &#x3D; IsString&lt;number&gt;;  &#x2F;&#x2F; false
+
+&#x2F;&#x2F; 实用工具类型
+type UserPreview &#x3D; Pick&lt;User, &quot;name&quot; | &quot;email&quot;&gt;;
+type UserWithoutEmail &#x3D; Omit&lt;User, &quot;email&quot;&gt;;
+type Nullable&lt;T&gt; &#x3D; T | null;
+type NonNullable&lt;T&gt; &#x3D; T extends null | undefined ? never : T;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+
+<h3 id="8-3-类型守卫"><a href="#8-3-类型守卫" class="headerlink" title="8.3 类型守卫"></a>8.3 类型守卫</h3><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F; typeof 类型守卫
+function padLeft(value: string, padding: string | number): string &#123;
+    if (typeof padding &#x3D;&#x3D;&#x3D; &quot;number&quot;) &#123;
+        return Array(padding + 1).join(&quot; &quot;) + value;
+    &#125;
+    return padding + value;
+&#125;
+
+&#x2F;&#x2F; instanceof 类型守卫
+class Bird &#123;
+    fly() &#123;
+        console.log(&quot;flying...&quot;);
+    &#125;
+&#125;
+
+class Fish &#123;
+    swim() &#123;
+        console.log(&quot;swimming...&quot;);
+    &#125;
+&#125;
+
+function move(pet: Bird | Fish) &#123;
+    if (pet instanceof Bird) &#123;
+        pet.fly();
+    &#125; else &#123;
+        pet.swim();
+    &#125;
+&#125;
+
+&#x2F;&#x2F; 自定义类型守卫
+interface Cat &#123;
+    meow(): void;
+&#125;
+
+interface Dog &#123;
+    bark(): void;
+&#125;
+
+function isDog(animal: Cat | Dog): animal is Dog &#123;
+    return (animal as Dog).bark !&#x3D;&#x3D; undefined;
+&#125;
+
+function petAnimal(animal: Cat | Dog): void &#123;
+    if (isDog(animal)) &#123;
+        animal.bark();
+    &#125; else &#123;
+        animal.meow();
+    &#125;
+&#125;
+
+&#x2F;&#x2F; in 操作符类型守卫
+function move2(pet: Bird | Fish) &#123;
+    if (&quot;fly&quot; in pet) &#123;
+        pet.fly();
+    &#125; else &#123;
+        pet.swim();
+    &#125;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+
+<h2 id="九、实践项目示例"><a href="#九、实践项目示例" class="headerlink" title="九、实践项目示例"></a>九、实践项目示例</h2><h3 id="9-1-简单的待办事项应用"><a href="#9-1-简单的待办事项应用" class="headerlink" title="9.1 简单的待办事项应用"></a>9.1 简单的待办事项应用</h3><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F; types.ts
+export interface Todo &#123;
+    id: number;
+    title: string;
+    description: string;
+    completed: boolean;
+    createdAt: Date;
+    completedAt?: Date;
+&#125;
+
+export type TodoFilter &#x3D; &#39;all&#39; | &#39;active&#39; | &#39;completed&#39;;
+
+&#x2F;&#x2F; todoService.ts
+export class TodoService &#123;
+    private todos: Todo[] &#x3D; [];
+    private nextId: number &#x3D; 1;
+    
+    addTodo(title: string, description: string &#x3D; &#39;&#39;): Todo &#123;
+        const todo: Todo &#x3D; &#123;
+            id: this.nextId++,
+            title,
+            description,
+            completed: false,
+            createdAt: new Date()
+        &#125;;
+        this.todos.push(todo);
+        return todo;
+    &#125;
+    
+    getTodos(filter: TodoFilter &#x3D; &#39;all&#39;): Todo[] &#123;
+        switch (filter) &#123;
+            case &#39;active&#39;:
+                return this.todos.filter(todo &#x3D;&gt; !todo.completed);
+            case &#39;completed&#39;:
+                return this.todos.filter(todo &#x3D;&gt; todo.completed);
+            default:
+                return [...this.todos];
+        &#125;
+    &#125;
+    
+    toggleTodo(id: number): Todo | null &#123;
+        const todo &#x3D; this.todos.find(t &#x3D;&gt; t.id &#x3D;&#x3D;&#x3D; id);
+        if (todo) &#123;
+            todo.completed &#x3D; !todo.completed;
+            todo.completedAt &#x3D; todo.completed ? new Date() : undefined;
+            return todo;
+        &#125;
+        return null;
+    &#125;
+    
+    deleteTodo(id: number): boolean &#123;
+        const index &#x3D; this.todos.findIndex(t &#x3D;&gt; t.id &#x3D;&#x3D;&#x3D; id);
+        if (index !&#x3D;&#x3D; -1) &#123;
+            this.todos.splice(index, 1);
+            return true;
+        &#125;
+        return false;
+    &#125;
+&#125;
+
+&#x2F;&#x2F; app.ts
+import &#123; TodoService, TodoFilter &#125; from &#39;.&#x2F;todoService&#39;;
+
+const todoService &#x3D; new TodoService();
+
+&#x2F;&#x2F; 添加待办事项
+todoService.addTodo(&#39;Learn TypeScript&#39;, &#39;Complete the TypeScript tutorial&#39;);
+todoService.addTodo(&#39;Build a project&#39;, &#39;Create a small project using TypeScript&#39;);
+todoService.addTodo(&#39;Review code&#39;);
+
+&#x2F;&#x2F; 标记完成
+todoService.toggleTodo(1);
+
+&#x2F;&#x2F; 获取不同状态的待办事项
+console.log(&#39;All todos:&#39;, todoService.getTodos());
+console.log(&#39;Active todos:&#39;, todoService.getTodos(&#39;active&#39;));
+console.log(&#39;Completed todos:&#39;, todoService.getTodos(&#39;completed&#39;));
+
+&#x2F;&#x2F; 删除待办事项
+todoService.deleteTodo(3);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+
+<h2 id="十、调试和错误处理"><a href="#十、调试和错误处理" class="headerlink" title="十、调试和错误处理"></a>十、调试和错误处理</h2><h3 id="10-1-常见的-TypeScript-错误"><a href="#10-1-常见的-TypeScript-错误" class="headerlink" title="10.1 常见的 TypeScript 错误"></a>10.1 常见的 TypeScript 错误</h3><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F; 1. 类型不匹配错误
+let age: number &#x3D; &quot;25&quot;;  &#x2F;&#x2F; Error: Type &#39;string&#39; is not assignable to type &#39;number&#39;
+
+&#x2F;&#x2F; 2. 访问不存在的属性
+interface User &#123;
+    name: string;
+&#125;
+
+const user: User &#x3D; &#123; name: &quot;Alice&quot; &#125;;
+console.log(user.age);  &#x2F;&#x2F; Error: Property &#39;age&#39; does not exist on type &#39;User&#39;
+
+&#x2F;&#x2F; 3. 未定义的变量
+function greet(name: string): void &#123;
+    console.log(hello);  &#x2F;&#x2F; Error: Cannot find name &#39;hello&#39;
+&#125;
+
+&#x2F;&#x2F; 4. 参数数量错误
+function add(a: number, b: number): number &#123;
+    return a + b;
+&#125;
+add(1);  &#x2F;&#x2F; Error: Expected 2 arguments, but got 1
+
+&#x2F;&#x2F; 5. 模块导入错误
+&#x2F;&#x2F; import &#123; nonExistent &#125; from &#39;.&#x2F;module&#39;;  &#x2F;&#x2F; Error: Module has no exported member &#39;nonExistent&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+
+<h3 id="10-2-调试技巧"><a href="#10-2-调试技巧" class="headerlink" title="10.2 调试技巧"></a>10.2 调试技巧</h3><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F; 使用 source maps 进行调试
+&#x2F;&#x2F; tsconfig.json 中配置：
+&#123;
+    &quot;compilerOptions&quot;: &#123;
+        &quot;sourceMap&quot;: true,
+        &quot;outDir&quot;: &quot;.&#x2F;dist&quot;
+    &#125;
+&#125;
+
+&#x2F;&#x2F; 使用 console.log 和类型断言
+function processData(data: any): void &#123;
+    &#x2F;&#x2F; 调试时添加类型断言
+    const typedData &#x3D; data as &#123; id: number; name: string &#125;;
+    console.log(&#39;Processing data:&#39;, typedData);
+    
+    &#x2F;&#x2F; 检查类型
+    console.log(&#39;Type of data:&#39;, typeof data);
+    console.log(&#39;Is array?&#39;, Array.isArray(data));
+&#125;
+
+&#x2F;&#x2F; 使用调试器
+function complexCalculation(values: number[]): number &#123;
+    debugger;  &#x2F;&#x2F; 在此处设置断点
+    return values.reduce((total, value) &#x3D;&gt; &#123;
+        &#x2F;&#x2F; 可以在此处检查变量
+        return total + value * 2;
+    &#125;, 0);
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+
+<h2 id="十一、最佳实践"><a href="#十一、最佳实践" class="headerlink" title="十一、最佳实践"></a>十一、最佳实践</h2><h3 id="11-1-代码组织"><a href="#11-1-代码组织" class="headerlink" title="11.1 代码组织"></a>11.1 代码组织</h3><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F; 良好的文件结构
+project&#x2F;
+├── src&#x2F;
+│   ├── types&#x2F;          &#x2F;&#x2F; 类型定义
+│   │   ├── user.ts
+│   │   └── product.ts
+│   ├── services&#x2F;       &#x2F;&#x2F; 业务逻辑
+│   │   ├── userService.ts
+│   │   └── productService.ts
+│   ├── utils&#x2F;          &#x2F;&#x2F; 工具函数
+│   │   └── formatters.ts
+│   ├── components&#x2F;     &#x2F;&#x2F; UI 组件（如果使用框架）
+│   └── index.ts        &#x2F;&#x2F; 入口文件
+├── tests&#x2F;              &#x2F;&#x2F; 测试文件
+├── dist&#x2F;               &#x2F;&#x2F; 编译输出
+├── package.json
+└── tsconfig.json
+
+&#x2F;&#x2F; 使用 barrel exports
+&#x2F;&#x2F; types&#x2F;index.ts
+export * from &#39;.&#x2F;user&#39;;
+export * from &#39;.&#x2F;product&#39;;
+export * from &#39;.&#x2F;order&#39;;
+
+&#x2F;&#x2F; 使用：import &#123; User, Product &#125; from &#39;.&#x2F;types&#39;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+
+<h3 id="11-2-类型安全的最佳实践"><a href="#11-2-类型安全的最佳实践" class="headerlink" title="11.2 类型安全的最佳实践"></a>11.2 类型安全的最佳实践</h3><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F; 1. 避免使用 any
+&#x2F;&#x2F; 不好的做法
+function processData(data: any): any &#123;
+    return data.something;
+&#125;
+
+&#x2F;&#x2F; 好的做法
+interface Data &#123;
+    something: string;
+&#125;
+
+function processData(data: Data): string &#123;
+    return data.something;
+&#125;
+
+&#x2F;&#x2F; 2. 使用接口而不是内联类型
+&#x2F;&#x2F; 不好的做法
+function createUser(user: &#123; name: string; age: number &#125;): void &#123;
+    &#x2F;&#x2F; ...
+&#125;
+
+&#x2F;&#x2F; 好的做法
+interface User &#123;
+    name: string;
+    age: number;
+&#125;
+
+function createUser(user: User): void &#123;
+    &#x2F;&#x2F; ...
+&#125;
+
+&#x2F;&#x2F; 3. 使用 readonly 保护数据
+interface Config &#123;
+    readonly apiUrl: string;
+    readonly timeout: number;
+&#125;
+
+const config: Config &#x3D; &#123;
+    apiUrl: &#39;https:&#x2F;&#x2F;api.example.com&#39;,
+    timeout: 5000
+&#125;;
+&#x2F;&#x2F; config.apiUrl &#x3D; &#39;new-url&#39;;  &#x2F;&#x2F; Error: 只读属性
+
+&#x2F;&#x2F; 4. 使用 const 断言
+const colors &#x3D; [&#39;red&#39;, &#39;green&#39;, &#39;blue&#39;] as const;
+&#x2F;&#x2F; colors[0] &#x3D; &#39;yellow&#39;;  &#x2F;&#x2F; Error: 只读数组
+
+&#x2F;&#x2F; 5. 使用 unknown 而不是 any
+function safeParse(json: string): unknown &#123;
+    return JSON.parse(json);
+&#125;
+
+const result &#x3D; safeParse(&#39;&#123;&quot;name&quot;: &quot;Alice&quot;&#125;&#39;);
+&#x2F;&#x2F; result.name;  &#x2F;&#x2F; Error: Object is of type &#39;unknown&#39;
+if (typeof result &#x3D;&#x3D;&#x3D; &#39;object&#39; &amp;&amp; result !&#x3D;&#x3D; null &amp;&amp; &#39;name&#39; in result) &#123;
+    console.log((result as &#123; name: string &#125;).name);  &#x2F;&#x2F; 安全访问
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+
+<h2 id="十二、与-JavaScript-互操作"><a href="#十二、与-JavaScript-互操作" class="headerlink" title="十二、与 JavaScript 互操作"></a>十二、与 JavaScript 互操作</h2><h3 id="12-1-声明文件-d-ts"><a href="#12-1-声明文件-d-ts" class="headerlink" title="12.1 声明文件 (.d.ts)"></a>12.1 声明文件 (.d.ts)</h3><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F; 为 JavaScript 库添加类型声明
+&#x2F;&#x2F; jquery.d.ts
+declare namespace jQuery &#123;
+    function ajax(url: string, settings?: any): void;
+    function get(url: string, data?: any, success?: any, dataType?: any): void;
+    function post(url: string, data?: any, success?: any, dataType?: any): void;
+&#125;
+
+&#x2F;&#x2F; 使用 declare 声明全局变量
+declare const VERSION: string;
+declare function logMessage(message: string): void;
+
+&#x2F;&#x2F; 使用三斜线指令引用声明文件
+&#x2F;&#x2F;&#x2F; &lt;reference path&#x3D;&quot;jquery.d.ts&quot; &#x2F;&gt;
+
+&#x2F;&#x2F; 在现代项目中，通常使用 @types 包
+&#x2F;&#x2F; npm install @types&#x2F;jquery --save-dev<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+
+<h3 id="12-2-迁移-JavaScript-项目"><a href="#12-2-迁移-JavaScript-项目" class="headerlink" title="12.2 迁移 JavaScript 项目"></a>12.2 迁移 JavaScript 项目</h3><figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F; 1. 重命名 .js 文件为 .ts
+&#x2F;&#x2F; 2. 处理初始错误
+let someValue;  &#x2F;&#x2F; 隐式的 any 类型
+
+&#x2F;&#x2F; 添加类型注解
+let someValue: string;
+
+&#x2F;&#x2F; 3. 逐步添加严格的类型检查
+&#x2F;&#x2F; 从宽松配置开始
+&#123;
+    &quot;compilerOptions&quot;: &#123;
+        &quot;strict&quot;: false,
+        &quot;noImplicitAny&quot;: false
+    &#125;
+&#125;
+
+&#x2F;&#x2F; 逐步启用严格模式
+&#123;
+    &quot;compilerOptions&quot;: &#123;
+        &quot;strict&quot;: true,
+        &quot;noImplicitAny&quot;: true,
+        &quot;strictNullChecks&quot;: true
+    &#125;
+&#125;
+
+&#x2F;&#x2F; 4. 使用 JSDoc 注解
+&#x2F;**
+ * @param &#123;string&#125; name - 用户名
+ * @returns &#123;string&#125; 问候语
+ *&#x2F;
+function greet(name) &#123;
+    return &#96;Hello, $&#123;name&#125;!&#96;;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+
+<h2 id="十三、学习资源和下一步"><a href="#十三、学习资源和下一步" class="headerlink" title="十三、学习资源和下一步"></a>十三、学习资源和下一步</h2><h3 id="13-1-官方资源"><a href="#13-1-官方资源" class="headerlink" title="13.1 官方资源"></a>13.1 官方资源</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://www.typescriptlang.org/docs/">TypeScript 官方文档</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.typescriptlang.org/play">TypeScript Playground</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/microsoft/TypeScript">TypeScript GitHub 仓库</a></li>
+</ul>
+<h3 id="13-2-推荐的学习路径"><a href="#13-2-推荐的学习路径" class="headerlink" title="13.2 推荐的学习路径"></a>13.2 推荐的学习路径</h3><ol>
+<li><strong>基础掌握</strong>：类型系统、接口、类、泛型</li>
+<li><strong>中级进阶</strong>：高级类型、模块、命名空间、装饰器</li>
+<li><strong>高级应用</strong>：类型编程、工具类型、编译器 API</li>
+<li><strong>框架集成</strong>：React + TypeScript、Vue + TypeScript、Angular</li>
+</ol>
+<h3 id="13-3-实战项目想法"><a href="#13-3-实战项目想法" class="headerlink" title="13.3 实战项目想法"></a>13.3 实战项目想法</h3><ol>
+<li><strong>待办事项应用</strong>：练习基础类型和状态管理</li>
+<li><strong>API 客户端</strong>：练习接口定义和异步操作</li>
+<li><strong>计算器应用</strong>：练习类设计和错误处理</li>
+<li><strong>数据可视化工具</strong>：练习复杂类型和第三方库集成</li>
+</ol>
+<p>记住，学习 TypeScript 是一个循序渐进的过程。从简单的类型注解开始，逐步掌握更高级的特性，最终你将能够写出类型安全、易于维护的 JavaScript 代码。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/" class="category-chain-item">技术笔记</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/ts/" class="print-no-link">#ts</a>
+      
+        <a href="/tags/javascript/" class="print-no-link">#javascript</a>
+      
+        <a href="/tags/ByAI/" class="print-no-link">#ByAI</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>TypeScript教程</div>
+      <div>http://zec-cn.pages.dev/2026/04/29/TS/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>zec</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2026年4月29日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2026/04/29/CC-Licence/" title="CC 协议">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">CC 协议</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <i class="iconfont icon-love"></i> <a href="https://zec-cn.pages.dev" target="_blank" rel="nofollow noopener"><span>ZEC</span></a> <i class="iconfont icon-love"></i> <a href="https://icp.gov.moe/?keyword=20261354" target="_blank">萌ICP备20261354号</a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://cdn.bootcdn.net/ajax/libs/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://cdn.bootcdn.net/ajax/libs/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.bootcdn.net/ajax/libs/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    function isExpandAllEnabled() {
+      return CONFIG.toc && CONFIG.toc.expand_all === true;
+    }
+    function expandAllToc() {
+      if (!isExpandAllEnabled()) { return; }
+      jQuery('#toc-body .tocbot-is-collapsed').removeClass('tocbot-is-collapsed');
+    }
+    function updateTocToggle($li, $childList) {
+      var $toggle = $li.children('.toc-toggle');
+      if ($toggle.length === 0) { return; }
+      var collapsed = $childList.hasClass('tocbot-is-collapsed');
+      $toggle
+        .toggleClass('toc-toggle-collapsed', collapsed)
+        .toggleClass('toc-toggle-expanded', !collapsed);
+    }
+    function bindTocToggle() {
+      if (!isExpandAllEnabled()) { return; }
+      jQuery('#toc-body .toc-list-item').each(function() {
+        var $li = jQuery(this);
+        var $childList = $li.children('ol');
+        if ($childList.length === 0) {
+          if ($li.children('.toc-toggle').length === 0) {
+            $li.prepend('<span class="toc-toggle toc-toggle-placeholder" aria-hidden="true">›</span>');
+          }
+          return;
+        }
+
+        if ($li.children('.toc-toggle').length === 0) {
+          $li.prepend('<span class="toc-toggle toc-toggle-expanded" aria-hidden="true">›</span>');
+        }
+        updateTocToggle($li, $childList);
+      });
+      jQuery('#toc-body').off('click.tocToggle').on('click.tocToggle', '.toc-toggle', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var $li = jQuery(this).parent('.toc-list-item');
+        var $childList = $li.children('ol');
+        if ($childList.length === 0) { return; }
+        $childList.toggleClass('tocbot-is-collapsed');
+        updateTocToggle($li, $childList);
+      });
+      if (!window.__tocToggleObserver) {
+        window.__tocToggleObserver = new MutationObserver(function(mutations) {
+          mutations.forEach(function(mutation) {
+            if (mutation.type !== 'attributes' || mutation.attributeName !== 'class') { return; }
+            var $list = jQuery(mutation.target);
+            var $li = $list.parent('.toc-list-item');
+            if ($li.length === 0) { return; }
+            updateTocToggle($li, $list);
+          });
+        });
+        jQuery('#toc-body ol').each(function() {
+          window.__tocToggleObserver.observe(this, { attributes: true });
+        });
+      }
+    }
+    var tocConfig = Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc);
+    if (isExpandAllEnabled()) {
+      tocConfig.collapseDepth = 6;
+    }
+    window.tocbot.init(tocConfig);
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+    expandAllToc();
+    bindTocToggle();
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+        expandAllToc();
+        bindTocToggle();
+      }
+    });
+  });
+</script>
+
+
+  <script  src="https://cdn.bootcdn.net/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js" ></script>
+
+  <script src=https://cdn.bootcdn.net/ajax/libs/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.bootcdn.net/ajax/libs/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://cdn.bootcdn.net/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
