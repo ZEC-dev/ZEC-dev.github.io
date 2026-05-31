@@ -1,6 +1,6 @@
-
 hexo.extend.filter.register('theme_inject', function(injects) {
-    injects.head.raw('js',`<script defer src="https://cloud.umami.is/script.js" data-website-id="c32e9625-677e-42ce-9bc2-d09a84da3333"></script>`)
+    injects.head.raw('js',`<script src="https://seb.lleft.cn/tracker/seb.js" data-tracking-id="f0e36df844f042a193c937afdcf486ea"><\/script>
+        <script defer src="https://cloud.umami.is/script.js" data-website-id="c32e9625-677e-42ce-9bc2-d09a84da3333"></script>`)
     // 只注入 CSS 样式，使用 raw() 方法
     injects.head.raw('custom-cursor', `
         <style>
