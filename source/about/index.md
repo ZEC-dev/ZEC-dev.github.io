@@ -3,6 +3,7 @@ title: about
 date: 2026-04-28 22:40:04
 ---
 [网站统计](https://cloud.umami.is/analytics/eu/websites/c32e9625-677e-42ce-9bc2-d09a84da3333)
+[网站统计2](https://seb.lleft.cn/stats/13)
 *这么唐的话是DS写的*
 ### 🎉 Hello, I‘m ZEC 🥳
 
