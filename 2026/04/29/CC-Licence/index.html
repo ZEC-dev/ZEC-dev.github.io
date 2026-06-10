@@ -1,0 +1,1145 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/logo.png">
+  <link rel="icon" href="/img/logo.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="zec">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="开源协议与知识共享 (CC) 指南本文档旨在帮助创作者与开发者理解并选择适合自己作品的许可协议。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CC 协议">
+<meta property="og:url" content="http://zec-cn.pages.dev/2026/04/29/CC-Licence/index.html">
+<meta property="og:site_name" content="ZEC Blogs">
+<meta property="og:description" content="开源协议与知识共享 (CC) 指南本文档旨在帮助创作者与开发者理解并选择适合自己作品的许可协议。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-04-29T21:25:43.000Z">
+<meta property="article:modified_time" content="2026-06-10T13:51:49.470Z">
+<meta property="article:author" content="zec">
+<meta property="article:tag" content="IT杂谈">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>CC 协议 - ZEC Blogs</title>
+
+  <link  rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" />
+
+  <link  rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"zec-cn.pages.dev","root":"/","version":"1.9.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"expand_all":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"openkounter":{"server_url":"https://open-kounter.mintimate.cn","path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  <script src="https://seb.lleft.cn/tracker/seb.js" data-tracking-id="f0e36df844f042a193c937afdcf486ea"></script>
+        <script defer src="https://cloud.umami.is/script.js" data-website-id="c32e9625-677e-42ce-9bc2-d09a84da3333"></script>
+        <style>
+            body {
+                cursor: url('/img/mouse_main.png') 0 0, auto;
+            }
+            a:hover{cursor: url('/img/mouse_link.png') 0 0, pointer;}
+        </style>
+    <link rel="stylesheet" href="/css/back.css">
+<meta name="generator" content="Hexo 8.1.2"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>ZEC Blogs</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content (desktop) -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/projects" target="_self">
+                <i class="iconfont icon-code"></i>
+                <span>项目</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/sites" target="_self">
+                <i class="iconfont icon-books"></i>
+                <span>网站</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile grid menu overlay -->
+<div id="mobile-grid-menu" class="d-lg-none">
+  <div class="mobile-grid-menu-inner">
+    <div class="container">
+      <div class="row">
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-home-fill"></i>
+                  <span>首页</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/archives/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-archive-fill"></i>
+                  <span>归档</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/categories/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-category-fill"></i>
+                  <span>分类</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/tags/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-tags-fill"></i>
+                  <span>标签</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/about/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-user-fill"></i>
+                  <span>关于</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/links/" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-link-fill"></i>
+                  <span>友链</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/projects" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-code"></i>
+                  <span>项目</span>
+                </div>
+              </a>
+            </div>
+          
+        
+          
+          
+          
+          
+            <div class="col-4 mobile-grid-cell">
+              <a href="/sites" target="_self">
+                <div class="mobile-grid-item">
+                  <i class="iconfont icon-books"></i>
+                  <span>网站</span>
+                </div>
+              </a>
+            </div>
+          
+        
+        
+          <div class="col-4 mobile-grid-cell" id="mobile-search-btn">
+            <a href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <div class="mobile-grid-item">
+                <i class="iconfont icon-search"></i>
+                <span>搜索</span>
+              </div>
+            </a>
+          </div>
+        
+        
+          <div class="col-4 mobile-grid-cell" id="mobile-color-toggle-btn"
+               data-label-light="开灯"
+               data-label-dark="关灯">
+            <a href="javascript:;" aria-label="Color Toggle">
+              <div class="mobile-grid-item">
+                <i class="iconfont icon-dark" id="mobile-color-toggle-icon"></i>
+                <span id="mobile-color-toggle-label">关灯</span>
+              </div>
+            </a>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/TB.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="CC 协议"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        zec
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2026-04-29 21:25" pubdate>
+          星期三, 四月 29日 2026, 9:25 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          <!-- compatible with older versions-->
+          2.5k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          <!-- compatible with older versions-->
+          21 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">CC 协议</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="开源协议与知识共享-CC-指南"><a href="#开源协议与知识共享-CC-指南" class="headerlink" title="开源协议与知识共享 (CC) 指南"></a>开源协议与知识共享 (CC) 指南</h1><p>本文档旨在帮助创作者与开发者理解并选择适合自己作品的许可协议。</p>
+<span id="more"></span>
+<h2 id="1-知识共享-Creative-Commons-协议"><a href="#1-知识共享-Creative-Commons-协议" class="headerlink" title="1. 知识共享 (Creative Commons) 协议"></a>1. 知识共享 (Creative Commons) 协议</h2><p>Creative Commons (CC) 协议主要用于<strong>图片、文档、文章、音乐、视频等非软件类创作</strong>。它并非严格意义上的”开源软件许可证”，而是一套灵活的著作权许可。</p>
+<h3 id="1-1-核心许可要素"><a href="#1-1-核心许可要素" class="headerlink" title="1.1 核心许可要素"></a>1.1 核心许可要素</h3><p>CC 协议由四种基础条件组合而成：</p>
+<table>
+<thead>
+<tr>
+<th>要素</th>
+<th>简称</th>
+<th>标志</th>
+<th>含义与要求</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>署名</strong></td>
+<td>BY</td>
+<td>©</td>
+<td><strong>必须</strong>给出适当的署名，提供指向本许可协议的链接，同时标明是否（对原始作品）作了修改。</td>
+</tr>
+<tr>
+<td><strong>相同方式共享</strong></td>
+<td>SA</td>
+<td>↻</td>
+<td>如果您改编、修改或基于本作品创作，<strong>必须</strong>依据<strong>与原先相同的许可协议</strong>分发您的贡献作品。</td>
+</tr>
+<tr>
+<td><strong>非商业性使用</strong></td>
+<td>NC</td>
+<td>＄</td>
+<td><strong>不得</strong>将本作品用于<strong>商业目的</strong>。</td>
+</tr>
+<tr>
+<td><strong>禁止演绎</strong></td>
+<td>ND</td>
+<td>＝</td>
+<td>如果您再混合、转换、或者基于本作品创作，<strong>不得</strong>分发修改后的作品。</td>
+</tr>
+</tbody></table>
+<h3 id="1-2-六种常用-CC-协议组合"><a href="#1-2-六种常用-CC-协议组合" class="headerlink" title="1.2 六种常用 CC 协议组合"></a>1.2 六种常用 CC 协议组合</h3><p>根据限制的严格程度，从最宽松到最严格排列：</p>
+<ol>
+<li><p><strong>CC BY</strong> (<code>BY</code>)<br>最自由的协议。只需署名，即可自由使用、修改、分发，甚至商用。</p>
+</li>
+<li><p><strong>CC BY-SA</strong> (<code>BY-SA</code>)<br>要求署名，且演绎作品必须使用<strong>相同</strong>的许可协议。这是维基百科使用的协议，具有”传染性”。</p>
+</li>
+<li><p><strong>CC BY-NC</strong> (<code>BY-NC</code>)<br>要求署名，但<strong>禁止任何商业用途</strong>。可以自由修改和分享。</p>
+</li>
+<li><p><strong>CC BY-NC-SA</strong> (<code>BY-NC-SA</code>)<br>要求署名，禁止商业用途，且演绎作品必须使用相同许可协议。</p>
+</li>
+<li><p><strong>CC BY-ND</strong> (<code>BY-ND</code>)<br>要求署名，但<strong>禁止任何形式的修改和演绎</strong>。允许商业用途，但必须原样分发。</p>
+</li>
+<li><p><strong>CC BY-NC-ND</strong> (<code>BY-NC-ND</code>)<br>限制最严格的协议。仅允许下载并原样分享作品，必须署名，且<strong>不得用于商业用途或进行任何修改</strong>。</p>
+</li>
+</ol>
+<blockquote>
+<p><strong>重要说明</strong>：</p>
+<ul>
+<li><strong>CC0</strong>：并非许可协议，而是一种放弃一切权利、将作品投入”公有领域”的工具。</li>
+<li><strong>开源定义</strong>：根据”开源定义”(OSD)，包含 <strong>NC (非商业)</strong> 或 <strong>ND (禁止演绎)</strong> 条款的CC协议，因其限制了使用自由，<strong>不被视为开源许可证</strong>。</li>
+</ul>
+</blockquote>
+<h3 id="1-3-选择与使用-CC-协议"><a href="#1-3-选择与使用-CC-协议" class="headerlink" title="1.3 选择与使用 CC 协议"></a>1.3 选择与使用 CC 协议</h3><ul>
+<li><strong>官方选择器</strong>：访问 <a target="_blank" rel="noopener" href="https://creativecommons.org/choose">creativecommons.org&#x2F;choose</a> 通过交互式问答确定合适的协议。</li>
+<li><strong>声明方式</strong>：在作品显著位置（如网站页脚、图片描述、文档扉页）添加对应的CC标识和链接。例如：</li>
+</ul>
+<figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">本作品采用 CC BY-SA 4.0 许可协议进行许可。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></div></figure>
+
+<ul>
+<li><strong>版本</strong>：请始终使用最新版本（目前是 4.0 国际版），以获得最清晰和全球通用的法律文本。</li>
+</ul>
+<hr>
+<h2 id="2-开源软件许可证-Open-Source-Software-Licenses"><a href="#2-开源软件许可证-Open-Source-Software-Licenses" class="headerlink" title="2. 开源软件许可证 (Open Source Software Licenses)"></a>2. 开源软件许可证 (Open Source Software Licenses)</h2><p>开源软件许可证是专门为<strong>软件源代码</strong>设计的法律协议，旨在保障用户使用、学习、修改和分发软件的自由。</p>
+<h3 id="2-1-常见开源软件许可证对比"><a href="#2-1-常见开源软件许可证对比" class="headerlink" title="2.1 常见开源软件许可证对比"></a>2.1 常见开源软件许可证对比</h3><table>
+<thead>
+<tr>
+<th>许可证</th>
+<th>类别</th>
+<th>核心要求</th>
+<th>特点与适用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>MIT</strong></td>
+<td>宽松型</td>
+<td>1. 在分发时保留原许可声明和版权信息。<br />2. 对使用者无其他限制。</td>
+<td><strong>极其宽松</strong>。允许闭源商用，是最流行、最易兼容的许可证之一。适合希望被广泛采用的库和工具。</td>
+</tr>
+<tr>
+<td><strong>Apache 2.0</strong></td>
+<td>宽松型</td>
+<td>1. 保留版权、专利、商标和归属声明。<br />2. 对修改文件需有明确标注。<br />3. 提供明确的专利授权。</td>
+<td><strong>商业友好且有专利保护</strong>。比MIT更详细，提供了明确的专利贡献和授权条款，适合大型企业项目。</td>
+</tr>
+<tr>
+<td><strong>BSD 3-Clause</strong></td>
+<td>宽松型</td>
+<td>1. 保留版权声明。<br />2. 不得使用原作者名为衍生产品背书。</td>
+<td>与MIT类似，非常宽松。常用于学术机构或老牌开源项目。</td>
+</tr>
+<tr>
+<td><strong>GPL v3</strong></td>
+<td>Copyleft（强传染性）</td>
+<td>1. 开源任何基于本作品的衍生作品（”传染性”）。<br />2. 必须提供源代码。<br />3. 明确专利授权和反硬件限制条款。</td>
+<td><strong>保护用户自由最严格</strong>。要求衍生作品必须同样以GPL v3开源，适合强调自由软件理念的项目（如GNU项目）。</td>
+</tr>
+<tr>
+<td><strong>LGPL v3</strong></td>
+<td>Copyleft（弱传染性）</td>
+<td>1. 对库本身修改必须开源。<br />2. <strong>仅动态链接使用该库的程序，无需开源</strong>。</td>
+<td><strong>适用于软件库</strong>。旨在让专有软件可以自由使用该库，同时保护库本身的开源改进。</td>
+</tr>
+<tr>
+<td><strong>Mozilla Public License 2.0</strong></td>
+<td>Copyleft（弱传染性）</td>
+<td>1. 对MPL许可的文件修改后，必须开源这些文件。<br />2. 可以将MPL代码与其他专有代码组合成更大的作品。</td>
+<td><strong>文件级Copyleft</strong>，平衡了开源和专有需求。适合希望核心部分保持开源，但允许紧密集成闭源代码的项目。</td>
+</tr>
+</tbody></table>
+<h3 id="2-2-如何选择开源软件许可证"><a href="#2-2-如何选择开源软件许可证" class="headerlink" title="2.2 如何选择开源软件许可证"></a>2.2 如何选择开源软件许可证</h3><p>考虑以下三个问题，可以快速缩小选择范围：</p>
+<figure><div class="code-wrapper"><pre class="line-numbers language-none"><code class="language-none">1.是否希望我的代码即使被用于闭源商业软件，也只需简单署名？
+-&gt; 是：选择 宽松型许可证 (MIT, Apache 2.0, BSD)。
+-&gt; 否：进入第2题。
+
+2.是否希望所有使用&#x2F;修改我代码的衍生作品都必须保持开源？
+-&gt; 是：选择 强 Copyleft 许可证 (GPL)。
+-&gt; 否：进入第3题。
+
+3.我的项目主要是一个希望被广泛使用的库或框架？
+-&gt; 是：选择 弱 Copyleft 许可证 (LGPL, MPL)。
+-&gt; 否：可以重新考虑宽松型或许可证。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div></figure>
+
+<ul>
+<li><strong>推荐工具</strong>：使用 <a target="_blank" rel="noopener" href="https://choosealicense.com/">choosealicense.com</a>（GitHub官方维护）来辅助决策。</li>
+</ul>
+<hr>
+<h2 id="3-核心区别与选用总结"><a href="#3-核心区别与选用总结" class="headerlink" title="3. 核心区别与选用总结"></a>3. 核心区别与选用总结</h2><table>
+<thead>
+<tr>
+<th>方面</th>
+<th>知识共享 (CC) 协议</th>
+<th>开源软件许可证</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>主要对象</strong></td>
+<td>非软件类创作：图片、文章、音乐、视频等。</td>
+<td>软件源代码。</td>
+</tr>
+<tr>
+<td><strong>核心目标</strong></td>
+<td>在”保留所有权利”的传统版权下，提供灵活的分享选择。</td>
+<td>保障用户运行、学习、修改和分发软件的自由。</td>
+</tr>
+<tr>
+<td><strong>典型协议</strong></td>
+<td>CC BY, CC BY-SA, CC BY-NC-ND</td>
+<td>MIT, GPL, Apache 2.0</td>
+</tr>
+<tr>
+<td><strong>“传染性”</strong></td>
+<td>仅在含 <strong>SA</strong> 条款的协议中存在。</td>
+<td>在 <strong>Copyleft</strong> 型许可证（如GPL）中存在。</td>
+</tr>
+<tr>
+<td><strong>商业用途</strong></td>
+<td>含 <strong>NC</strong> 条款的协议明确禁止。</td>
+<td>绝大多数许可证（除特定情况）都允许。</td>
+</tr>
+</tbody></table>
+<h3 id="⚠️-黄金法则"><a href="#⚠️-黄金法则" class="headerlink" title="⚠️ 黄金法则"></a>⚠️ 黄金法则</h3><p><strong>不要混用！</strong></p>
+<ul>
+<li><strong>为软件项目选择软件许可证</strong>（如 MIT、GPL）。</li>
+<li><strong>为非软件内容选择 CC 协议</strong>（如 CC BY）。</li>
+<li>如果一个项目包含两者（如一个包含文档和插图的软件项目），应<strong>分开声明许可</strong>（例如：代码采用 MIT 许可证，文档采用 CC BY 4.0 协议）。</li>
+</ul>
+<h3 id="📚-了解更多"><a href="#📚-了解更多" class="headerlink" title="📚 了解更多"></a>📚 了解更多</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://creativecommons.org/">Creative Commons 官方网站</a></li>
+<li><a target="_blank" rel="noopener" href="https://choosealicense.com/">Choose a License</a>（选择软件许可证）</li>
+<li><a target="_blank" rel="noopener" href="https://opensource.org/">Open Source Initiative (OSI)</a>（开源倡议组织，批准和维护OSI认证的许可证列表）</li>
+<li><a target="_blank" rel="noopener" href="https://www.gnu.org/licenses/license-list.html">GNU 许可证列表</a></li>
+</ul>
+<blockquote>
+<p>最后提示：本指南旨在提供一般性信息，不构成法律建议。对于涉及重要项目或商业决策的许可问题，建议咨询法律专业人士。</p>
+</blockquote>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/IT%E6%9D%82%E8%B0%88/" class="category-chain-item">IT杂谈</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/IT%E6%9D%82%E8%B0%88/" class="print-no-link">#IT杂谈</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>CC 协议</div>
+      <div>http://zec-cn.pages.dev/2026/04/29/CC-Licence/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>zec</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2026年4月29日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2026/04/29/helper/" title="本站帮助">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">本站帮助</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2026/04/29/TS/" title="TypeScript教程">
+                        <span class="hidden-mobile">TypeScript教程</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <i class="iconfont icon-love"></i> <a href="https://zec-cn.pages.dev" target="_blank" rel="nofollow noopener"><span>ZEC</span></a> <i class="iconfont icon-love"></i> <a href="https://icp.gov.moe/?keyword=20261354" target="_blank">萌ICP备20261354号</a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://cdn.bootcdn.net/ajax/libs/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://cdn.bootcdn.net/ajax/libs/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.bootcdn.net/ajax/libs/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    function isExpandAllEnabled() {
+      return CONFIG.toc && CONFIG.toc.expand_all === true;
+    }
+    function expandAllToc() {
+      if (!isExpandAllEnabled()) { return; }
+      jQuery('#toc-body .tocbot-is-collapsed').removeClass('tocbot-is-collapsed');
+    }
+    function updateTocToggle($li, $childList) {
+      var $toggle = $li.children('.toc-toggle');
+      if ($toggle.length === 0) { return; }
+      var collapsed = $childList.hasClass('tocbot-is-collapsed');
+      $toggle
+        .toggleClass('toc-toggle-collapsed', collapsed)
+        .toggleClass('toc-toggle-expanded', !collapsed);
+    }
+    function bindTocToggle() {
+      if (!isExpandAllEnabled()) { return; }
+      jQuery('#toc-body .toc-list-item').each(function() {
+        var $li = jQuery(this);
+        var $childList = $li.children('ol');
+        if ($childList.length === 0) {
+          if ($li.children('.toc-toggle').length === 0) {
+            $li.prepend('<span class="toc-toggle toc-toggle-placeholder" aria-hidden="true">›</span>');
+          }
+          return;
+        }
+
+        if ($li.children('.toc-toggle').length === 0) {
+          $li.prepend('<span class="toc-toggle toc-toggle-expanded" aria-hidden="true">›</span>');
+        }
+        updateTocToggle($li, $childList);
+      });
+      jQuery('#toc-body').off('click.tocToggle').on('click.tocToggle', '.toc-toggle', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var $li = jQuery(this).parent('.toc-list-item');
+        var $childList = $li.children('ol');
+        if ($childList.length === 0) { return; }
+        $childList.toggleClass('tocbot-is-collapsed');
+        updateTocToggle($li, $childList);
+      });
+      if (!window.__tocToggleObserver) {
+        window.__tocToggleObserver = new MutationObserver(function(mutations) {
+          mutations.forEach(function(mutation) {
+            if (mutation.type !== 'attributes' || mutation.attributeName !== 'class') { return; }
+            var $list = jQuery(mutation.target);
+            var $li = $list.parent('.toc-list-item');
+            if ($li.length === 0) { return; }
+            updateTocToggle($li, $list);
+          });
+        });
+        jQuery('#toc-body ol').each(function() {
+          window.__tocToggleObserver.observe(this, { attributes: true });
+        });
+      }
+    }
+    var tocConfig = Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc);
+    if (isExpandAllEnabled()) {
+      tocConfig.collapseDepth = 6;
+    }
+    window.tocbot.init(tocConfig);
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+    expandAllToc();
+    bindTocToggle();
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+        expandAllToc();
+        bindTocToggle();
+      }
+    });
+  });
+</script>
+
+
+  <script  src="https://cdn.bootcdn.net/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js" ></script>
+
+  <script src=https://cdn.bootcdn.net/ajax/libs/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.bootcdn.net/ajax/libs/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://cdn.bootcdn.net/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
