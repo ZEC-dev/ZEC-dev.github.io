@@ -11,3 +11,5 @@ date: 2026-05-31 17:38:31
 1. [gpproxy](https://ghproxy.com)
 ##### 优秀博客
 1. https://lleft.cn/
+1. [同龄人(西瓜猜字谜,至少同年级)的Blog!!!](https://www.xiguacaizimi.top/)
+1. https://xingwangzhe.fun/

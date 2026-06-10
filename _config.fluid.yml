@@ -18,11 +18,11 @@
 
 # 用于浏览器标签的图标
 # Icon for browser tab
-favicon: /img/logo-zec.png
+favicon: /img/logo.png
 
 # 用于苹果设备的图标
 # Icon for Apple touch
-apple_touch_icon: /img/logo-zec.png
+apple_touch_icon: /img/logo.png
 
 # 浏览器标签页中的标题分隔符，效果：文章名 - 站点名
 # Title separator in browser tab, eg: article - site
@@ -1067,6 +1067,12 @@ links:
       intro: "YCX2012",
       link: "https://www.luogu.com.cn/user/1049343",
       avatar: "https://cdn.luogu.com.cn/upload/usericon/1049343.png"
+    }
+    - {
+      title: "Liseezn'blog",
+      intro: "分享学习，项目，及教程",
+      link: "https://blog.liseezn.top",
+      avatar: "https://blog.liseezn.top/logo.webp"
     }
     - {
       title: "Fluid Blog",
