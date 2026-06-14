@@ -3,7 +3,8 @@ title: about
 date: 2026-04-28 22:40:04
 ---
 [网站统计](https://cloud.umami.is/analytics/eu/websites/c32e9625-677e-42ce-9bc2-d09a84da3333)
-[网站统计2](https://seb.lleft.cn/share/d2192d05801b4c06bfc0494ae9cbde49)
+[网站统计2](https://seb.lleft.cn/share/d2192d05801b4c06bfc0494ae9cbde49)  
+**本网站正在逐步迁移至[Astro](https://docs.astro.build/zh-cn/)**  
 *这么唐的话是DS写的*
 ### 🎉 Hello, I‘m ZEC 🥳
 
