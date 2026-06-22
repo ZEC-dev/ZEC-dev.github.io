@@ -13,6 +13,8 @@ date: 2026-05-31 17:38:31
 1. [汉化](https://dingzhen-vape.github.io/ClientDownloadWeb/)
 1. [Meteorclient](https://meteorclient.com/)
 1. [Wurst](https://www.wurstclient.net/)
+1. [MAS](https://massgrave.dev/)
+1. [FirPE](https://docs.firpe.cn/)
 ##### 优秀博客
 1. https://lleft.cn/
 1. [同龄人(西瓜猜字谜,至少同年级)的Blog!!!](https://www.xiguacaizimi.top/)
