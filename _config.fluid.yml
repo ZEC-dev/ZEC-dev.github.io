@@ -1063,6 +1063,12 @@ links:
   # Member item of page
   items:
     - {
+      title: "SuYoki",
+      intro: "yyds",
+      link: "https://yyds.zec.kdns.fr/",
+      avatar: "https://cdn.luogu.com.cn/upload/usericon/1942153.png"
+    }
+    - {
       title: "YCX2012",
       intro: "YCX2012",
       link: "https://www.luogu.com.cn/user/1049343",
